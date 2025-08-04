@@ -1,8 +1,6 @@
 class MyStack {
 public:
-    queue<int> q1,q2;
-    queue<int> current=q1;
-    queue<int> notcurrent=q2;
+    queue<int> current,notcurrent;
     MyStack() {
         
     }
