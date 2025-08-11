@@ -10,10 +10,10 @@ public:
     
         for (int i = 1; i < nums.size(); i++) {
             if (nums[i] != nums[k]) {
-                nums[k+1] = nums[i];
                 k++;
+                nums[k] = nums[i];
             }
         }
-        return k+1;
+        return k + 1; 
     }
 };
