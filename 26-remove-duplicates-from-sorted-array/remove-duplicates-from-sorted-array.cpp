@@ -1,17 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        set<int> uni;
-        for( int i =0 ; i<nums.size();i++){
-            
-            uni.insert(nums[i]);
-        }
-        int i =0;
-        for(int val:uni){
-            nums[i]=val;
-            i++;
-        }
-        return uni.size();
+        if (nums.empty()) return 0;
         
+        int k = 0; 
+    
+        for (int i = 1; i < nums.size(); i++) {
+            if (nums[i] != nums[k]) {
+                nums[k+1] = nums[i];
+                k++;
+            }
+        }
+        return k+1;
     }
 };
