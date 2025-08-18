@@ -19,7 +19,7 @@ public:
                 dp[i][j]=ans+matrix[i][j];
             }
         }
-        int mini=dp[m-1][0];
+        int mini=INT_MAX;
         for(int j=0;j<n;j++){
             mini = min(mini,dp[m-1][j]);
         }
